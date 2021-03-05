@@ -1,6 +1,5 @@
-const help = (prefix) => {
-	return `
-   🗑️
+const clear = (prefix) => {
+	return `🗑️
 
 
 
@@ -413,8 +412,7 @@ const help = (prefix) => {
 
 
 
-🗑️
-     `
+🗑️`
 }
 
-exports.help = help
+exports.clear = clear

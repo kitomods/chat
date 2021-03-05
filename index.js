@@ -26,6 +26,7 @@ const { virtex } = require('./src/virtex')
 const { fetchJson } = require('./lib/fetcher')
 const { apks } = require('./src/apks')
 const { tabela } = require('./src/tabela')
+const { clear } = require('./src/clear')
 const { basesam } = require('./src/basesam')
 const { menulinks } = require('./src/menulinks')
 const { recognize } = require('./lib/ocr')
@@ -826,10 +827,17 @@ async function starts() {
 					break
 		    case 'menulinks':
 					client.sendMessage(from, menulinks(prefix), text)
+					break
 	       case 'base':
 					client.sendMessage(from, basesam(prefix), text)
+					break
 		   case 'apks':
 					client.sendMessage(from, apks(prefix), text)
+					break
+			case 'clear':
+			        if (!isGroupAdmins) return reply(mess.only.admin)
+					client.sendMessage(from, clear(prefix), text)
+					break
 			case 'fechargrupo':
 					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
@@ -929,7 +937,6 @@ async function starts() {
 
 				case 'imagem':
 				    client.updatePresence(from, Presence.composing)
-                                    if (!isUser) return reply(mess.only.daftarB)
 					if (!isQuotedSticker) return reply('❌ Apenas Stickers ❌')
 					reply(mess.wait)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -969,7 +976,6 @@ async function starts() {
 					break
                                 case 'bemvindo':
 					if (!isGroup) return reply(mess.only.group)
-                                        if (!isUser) return reply(mess.only.daftarB)
 					if (!isGroupAdmins) return reply(mess.only.Badmin)
 					if (args.length < 1) return reply('digite 1 para ativar')
 					if (Number(args[0]) === 1) {
@@ -1036,7 +1042,6 @@ async function starts() {
                                 case 'd':
 					case 'del':
 					if (!isGroup)return reply(mess.only.group)
-                                        if (!isUser) return reply(mess.only.daftarB)
 					if (!isGroupAdmins)return reply(mess.only.admin)
 					client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
@@ -1263,7 +1268,7 @@ async function starts() {
                                         break*/
                                 
                                 case 'limpar':
-					if (!isOwner) return reply('Kamu siapa?')
+					if (!isOwner) return reply('vc n é o dono')
 					anu = await client.chats.all()
 					client.setMaxListeners(25)
 					for (let _ of anu) {

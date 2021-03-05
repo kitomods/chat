@@ -4,6 +4,7 @@ const menuadmin = (prefix, pushname) => {
  
  ◪ COMANDO DOS ADMINS
 ▻${prefix}bemvindo (da as boas vindas)
+▻${prefix}clear (limpa chat com txt)
 ▻${prefix}marcar (marca todos)
 ▻${prefix}d (apaga msg do bot)
 ▻${prefix}leave (bot mete o pé)

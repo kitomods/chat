@@ -1,7 +1,6 @@
 const help = (prefix) => {
 	return `
-   MAQUIAVÉLICO
-𝗽𝗮𝗿𝗮 𝘂𝘀𝗮𝗿 𝗼 𝗯𝗼𝘁, 𝗺𝗮𝗻𝗱𝗮 ${prefix}𝗿𝗴 (𝗻𝗶𝗰𝗸)
+              ℂ Ħ ᐬ〒 ĐΔ̸₷ ₣ᐬℂℂ❍Єֆ
 
 ◪ 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗖𝗢𝗘𝗦
   ❏ Prefix: 「  ${prefix}  」
@@ -22,6 +21,7 @@ const help = (prefix) => {
 ▻${prefix}tts (pt) (texto q vc quer q fale)
 ▻${prefix}memeindo (meme em ingles)
 ▻${prefix}fig (imagem ou gif ate 6 seg)
+▻${prefix}tabela (tabela para nicks)
 ▻${prefix}apks (apks pra edita zap)
 ▻${prefix}wame (link pro seu chat)
 ▻${prefix}meme (a msm coisa)

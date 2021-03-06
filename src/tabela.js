@@ -1,4 +1,4 @@
-const help = (prefix) => {
+const tabela = (prefix) => {
 	return `
    _₮ΔƁΣŁΔ D❍ 🔥亇⸼玄⸼ᜰ⸼〒⸼么⸼ℭ⸼፤⸼❍⸼Ŋ🔥_
 ͢͢͢
@@ -639,4 +639,4 @@ Y = ƴ ¥ 丫吖 Ɏ Ύ Ⴘ 쏘 γ צ ყ Ⴘ Ⴗ ע γ у Y ﻻ ㄚ Ⴤ 🇾 ψ 
      `
 }
 
-exports.help = help
+exports.tabela = tabela
